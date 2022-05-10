@@ -1,7 +1,9 @@
   PyTES README
 ========================================
 
-PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote control of transcranial electric stimulation and ease the deployment of a closed-loop TES system. PyTES supports two types of communication protocols to control the hardware: VISA and USBTMC. More detailed about there differences can be refered to the paper:
+PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote control of transcranial electric stimulation and ease the deployment of a closed-loop TES system. PyTES supports two types of communication protocols to control the hardware: VISA and USBTMC. More detailed about there differences can be refered to the paper. 
+
+![PyTES GUI](./Figures/toolbox_1.png)
  
 ****
 
@@ -37,6 +39,7 @@ More details about the installation of pyvisa can be found [here][pyvisa_link]
 Driver installation subjects to the chosen hardware(s). For exmaple, the Rigol arbitrary waveform generator requires the type-specific IVI driver, as listed [here][rigoldriver]. Users of PyTES are suggested to install the driver according to the official documentaion of their own device(s).
 
 ### PyTES
+
 
 
 ## Features 
@@ -79,7 +82,8 @@ In additiona to the provided functions, it is also possible and convenient to di
 
 
 ### GUI 
-* __Step 1__: Driver selection, USBTMC or VISA (Note: USBTMC is not applicable for Windows)
+* __Step 1__: Driver selection, USBTMC or VISA (Note: USBTMC is not applicable for Windows; For USBTMC protocol, the root access is required)
+![pwdinput](./Figures/toolbox_2.png)
 * __Step 2__: Device selection from the option menu
 * __Step 3__: Connection test via clicking "Connect" button
 * __Step 4__: Parameter setup
@@ -90,6 +94,12 @@ In additiona to the provided functions, it is also possible and convenient to di
     * `None` value for stimulation duration means a indefinite stimulation
     * `None` value for fade duration means no fade in/out will be applied
 * __Step 7__: Output stimulation signal via clicking "Output" of target channel
+
+Step 1 - 5:
+./Figures/toolbox.mp4
+
+Step 6 - 7:
+./Figures/toolbox_2.mp4
 
 ### Psychopy
 To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
