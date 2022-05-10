@@ -1,8 +1,8 @@
   PyTES README
 ========================================
 
-PyTES 
-
+PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote control of transcranial electric stimulation and ease the deployment of a closed-loop TES system. PyTES supports two types of communication protocols to control the hardware: VISA and USBTMC. More detailed about there differences can be refered to the paper:
+ 
 ****
 
 ## Contents
@@ -28,7 +28,14 @@ PyTES
 -----
 
 ### Prerequiste
-PyTES supports two types of drivers: USBTMC and VISA. 
+
+|           |   USBTMC   |    VISA    |
+|:---------:|:----------:|:----------:|
+|   Linux   |    None    |[pyvisa](Pyvisa)|
+|  Windows  |    N/A     |pyvisa+driver|
+
+#### Pyvisa
+More details obout the installation of pyvisa can be found [here][https://pyvisa.readthedocs.io/en/latest/introduction/getting.html] 
 
 
 ### PyTES
@@ -70,10 +77,12 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
 
 ## Known Issues 
     1. __Font issues of the GUI version__
-    The PyTES GUI is based on the package tkinter. It is known that the tkinter font cannot be correctly rendered under Anaconda Python on Ubuntu system. For better visualization, it is suggested to switch to non-conda Python installation. More discussion about this issue can be found [here](https://github.com/ContinuumIO/anaconda-issues/issues/6833#issuecomment-351363320)
+    The PyTES GUI is based on the package tkinter. It is known that the tkinter font cannot be correctly rendered under Anaconda Python on Ubuntu system. For better visualization, it is suggested to switch to non-conda Python installation. More discussion about this issue can be found [here][https://github.com/ContinuumIO/anaconda-issues/issues/6833#issuecomment-351363320]
 
          
-    2. **Font issues**
+    2. __USBTMC driver cannot be selected after using the VISA driver__
+    
+    Devices which are already opened by VISA protocol cannot be opened by USBTMC drivers. Restarting the hardware devices can fix the issue.
         
 -----
 
