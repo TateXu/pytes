@@ -52,13 +52,13 @@ PyTES can be seamlessly combined with other online experiment framework to const
 
 ### PyTES with arbitrary signal
 Some advanced TES require a non-regular shape of stimualtion signal, e.g., AM-tACS, etc. To better support such studies, PyTES provides such function to output an user-defined signal. 
-    * In the GUI version, the signal should be first used to create a dictionary as shown below. Next, this dictionary should be saved as a pickle file. Finally, input the path of pickle file into the corresponding entry.
+* In the GUI version, the signal should be first used to create a dictionary as shown below. Next, this dictionary should be saved as a pickle file. Finally, input the path of pickle file into the corresponding entry.
 
-    ```python
-    data_to_save = {'sps': sampling_rate_in_Hz,
-                    'data': a_list_of_all_data_points}
-    ```
-    * In the command line version, you can use the function `SignalGenerator().arb_func()` to output the arbitrary signal.
+```Python
+data_to_save = {'sps': sampling_rate_in_Hz,
+                'data': a_list_of_all_data_points}
+```
+* In the command line version, you can use the function `SignalGenerator().arb_func()` to output the arbitrary signal.
 
 ### Timer for stimulation and fade in/out duration (GUI version only)
 For the GUI version of PyTES, the timers for stimulation and fade in/out can be set seperately for different output channels. No input for these entries will indicate either indefinite stimulation or no fade in/out for the corresponding channel.
