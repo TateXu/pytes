@@ -96,9 +96,11 @@ In additiona to the provided functions, it is also possible and convenient to di
 * __Step 7__: Output stimulation signal via clicking "Output" of target channel
 
 Step 1 - 5:
+
 https://user-images.githubusercontent.com/27919893/167694285-08fd13ac-9ce1-4704-9b3f-1793c79d7791.mp4
 
 Step 6 - 7:
+
 https://user-images.githubusercontent.com/27919893/167694322-c0be0b92-31af-499b-8efa-535c65c14e07.mp4
 
 ### Psychopy
