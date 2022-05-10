@@ -96,10 +96,10 @@ In additiona to the provided functions, it is also possible and convenient to di
 * __Step 7__: Output stimulation signal via clicking "Output" of target channel
 
 Step 1 - 5:
-./Figures/toolbox.mp4
+https://user-images.githubusercontent.com/27919893/167694285-08fd13ac-9ce1-4704-9b3f-1793c79d7791.mp4
 
 Step 6 - 7:
-./Figures/toolbox_2.mp4
+https://user-images.githubusercontent.com/27919893/167694322-c0be0b92-31af-499b-8efa-535c65c14e07.mp4
 
 ### Psychopy
 To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
@@ -124,3 +124,11 @@ Devices which are already opened by VISA protocol cannot be opened by USBTMC dri
 [psychopy]: https://www.psychopy.org/builder/components/code.html
 [openvibe]: http://openvibe.inria.fr/tutorial-using-python-with-openvibe/#The+Python+Scripting+box
 [pytesfunction]: https://github.com/TateXu/pytes/blob/cb66334b7d7131cd4810b9c9db1c80861fc94695/signal_generator.py#L475
+
+
+
+
+
+
+
+
