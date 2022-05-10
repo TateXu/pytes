@@ -18,7 +18,7 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
     * GUI 
     * In Psychopy
     * In OpenVibe 
-* [Issues](#Issues)
+* [Known Issues](#Issues)
 
 ## Installation
 -----
@@ -63,14 +63,19 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
 ## Usage
 -----
 
-### Command line 
+### Command Line 
 
+The usage via command line version is just as same as the other Python packages. One example for controling the stimulation amplitude of tACS signal is as shown below:
 
 ```Python
 import SignalGenerator as SG()
 SG().amp(value=1, stim_mode='tACS')
 
 ```
+
+PyTES also provides many other functions to conveniently adjust the stimulation paramters, e.g., frequency, offset, phase, etc. More functions can be found at [here](./signal_generator.py#L475).
+
+In additiona to the provided functions, it is also possible and convenient to directly send SCPI command via PyTES to communicate with the hardware with the function [`SG().set_cmd()`](./signal_generator.py#L383).
 
 
 ### GUI 
@@ -100,7 +105,6 @@ The PyTES GUI is based on the package tkinter. It is known that the tkinter font
 
       
 2. __USBTMC driver cannot be selected after using the VISA driver__
-
 Devices which are already opened by VISA protocol cannot be opened by USBTMC drivers. Restarting the hardware devices can fix the issue.
     
 -----
@@ -109,3 +113,4 @@ Devices which are already opened by VISA protocol cannot be opened by USBTMC dri
 [rigoldriver]: https://www.rigolna.com/download
 [psychopy]: https://www.psychopy.org/builder/components/code.html
 [openvibe]: http://openvibe.inria.fr/tutorial-using-python-with-openvibe/#The+Python+Scripting+box
+[pytesfunction]: https://github.com/TateXu/pytes/blob/cb66334b7d7131cd4810b9c9db1c80861fc94695/signal_generator.py#L475
