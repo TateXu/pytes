@@ -21,7 +21,7 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
     * In OpenVibe 
 
 
-* [Known Issues](#Known Issues)
+* [Issues](#Issues)
 
 
 ## Installation
@@ -69,6 +69,13 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
 ### Command line 
 
 
+```Python
+import SignalGenerator as SG()
+SG().amp(1)
+
+```
+
+
 ### GUI 
     * __Step 1__: Driver selection, USBTMC or VISA (Note: USBTMC is not applicable for Windows)
     * __Step 2__: Device selection from the option menu
@@ -87,7 +94,7 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
 ### OpenVibe 
 __
 
-## Known Issues 
+## Issues 
     1. __Font issues of the GUI version__
     The PyTES GUI is based on the package tkinter. It is known that the tkinter font cannot be correctly rendered under Anaconda Python on Ubuntu system. For better visualization, it is suggested to switch to non-conda Python installation. More discussion about this issue can be found [here][condaissue]
 
