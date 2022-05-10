@@ -31,12 +31,14 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
 
 |           |   USBTMC   |    VISA    |
 |:---------:|:----------:|:----------:|
-|   Linux   |    None    |[pyvisa](Pyvisa)|
-|  Windows  |    N/A     |pyvisa+driver|
+|   Linux   |    None    |[pyvisa](#Pyvisa)|
+|  Windows  |    N/A     |[pyvisa](#Pyvisa) + [driver](#Driver)|
 
 #### Pyvisa
-More details obout the installation of pyvisa can be found [here][https://pyvisa.readthedocs.io/en/latest/introduction/getting.html] 
+More details obout the installation of pyvisa can be found [here][pyvisa_link] 
 
+#### Driver 
+Driver installation can be found here
 
 ### PyTES
 
@@ -85,4 +87,4 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
     Devices which are already opened by VISA protocol cannot be opened by USBTMC drivers. Restarting the hardware devices can fix the issue.
         
 -----
-
+[pyvisa_link]: https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
