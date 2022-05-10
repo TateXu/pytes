@@ -29,7 +29,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
 
 
-This file containts four classes with diamond inheritance as shown below:
+This file containts four classes with following hierarchy:
 
                                BaseDriver
                                    |
@@ -128,10 +128,11 @@ class VISA(BaseDriver):
                 tmp_dev = self.rm.open_resource(tmp_dev_name)
                 tmp_msg = tmp_dev.query("*IDN?")
                 info = f'Id: {tmp_dev_id}, Device info: {tmp_msg}'
-            except:
+            except Exception as e:
                 tmp_dev = None
                 info = f'Id: {tmp_dev_id}, Device info: Uncontrolable via SCPI\
                     commands, not target device'
+                print(e)
             finally:
                 print(info)
                 dev_instance_list.append(tmp_dev_name)
@@ -471,7 +472,18 @@ class SignalGenerator():
         else:
             self.set_cmd(f':SOUR{str(chn)}{para_dict[para]} {str(value)}')
 
-    def amp(self, value=None, query=False, chn=None):
+    def amp(self, value=None, chn=1, stim_mode='tACS'):
+        """ Adjust the amplitude of stimulation signal
+        """
+        if stim_mode == 'tACS':
+            self.tacs_amp(value=value, chn=chn)
+        elif stim_mode == 'tDCS':
+            self.offset(value=value, chn=chn)
+        elif stim_mode == 'tRNS':
+            offset = self.offset_val_ch1 if chn == 1 else self.offset_val_ch2
+            self.para_set({'noise': [value, offset]}, chn=chn)
+
+    def tacs_amp(self, value=None, query=False, chn=None):
         self._single_para_set(para='amp', value=value, query=query, chn=chn)
 
     def offset(self, value=None, query=False, chn=None):
@@ -529,7 +541,7 @@ class SignalGenerator():
 
         return data
 
-    def fade(self, amp=0.5, fade_dur=5, chn=1, step_per_sec=2, mode='fadein'):
+    def fade(self, amp=0.5, fade_dur=5, chn=1, step_per_sec=2, fademode='in'):
         """ Control the fade in/out of the current signal
 
         Parameters
@@ -544,7 +556,7 @@ class SignalGenerator():
         step_per_sec : int (default 2)
             The frequency of updating amplitude in one second.
             A larger number indicates a more frequent update and vice versa.
-        mode : 'fadein' | 'fadeout' (default 'fadein')
+        fademode : 'in' | 'out' (default 'in')
             'fadein' indicates the amplitude of signal increases
             'fadeout' indicates the amplitude of signal decreases
 
@@ -554,25 +566,13 @@ class SignalGenerator():
         # 0.002V is the minimum input voltage of the authors' hardware setup
         # step list is the list of amplitudes to update
         step_list = np.linspace(0.002, amp, int(fade_dur*step_per_sec))
-        if mode == 'fadein':
-            self.fade_amp(0.002, chn=chn)
+        if fademode == 'fadein':
+            self.amp(0.002, chn=chn)
             for stim_val in step_list:
                 time.sleep(sleep_dur)
-                self.fade_amp(val=stim_val, chn=chn)
-                print(stim_val)
-        elif mode == 'fadeout':
+                self.amp(val=stim_val, chn=chn)
+        elif fademode == 'out':
             for stim_val in step_list[::-1]:
-                self.fade_amp(val=stim_val, chn=chn)
+                self.amp(val=stim_val, chn=chn)
                 time.sleep(sleep_dur)
             print('off output')
-
-    def fade_amp(self, val, chn, stim_mode='tACS'):
-        """ Adjust the
-        """
-        if stim_mode == 'tACS':
-            self.sig_gen.amp(value=val, chn=chn)
-        elif stim_mode == 'tDCS':
-            self.sig_gen.para_set({'offset': val}, chn=chn)
-        elif stim_mode == 'tRNS':
-            offset = self.offset_val_ch1 if chn == 1 else self.offset_val_ch2
-            self.sig_gen.para_set({'noise': [val, offset]}, chn=chn)

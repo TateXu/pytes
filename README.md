@@ -13,22 +13,18 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
     * Closed-loop application
     * TES with arbitrary signal
     * Timer for stimulation and fade in/out duration (GUI version)
-
 * [Usage](#Usage)
     * Command line 
     * GUI 
     * In Psychopy
     * In OpenVibe 
-
-
 * [Issues](#Issues)
-
 
 ## Installation
 -----
 
 ### Prerequiste
-The table of prerequiste varies 
+Different operating system and communication protocol has diverse prerequistes for installing and using the PyTES package. A brief summary is listed below:
 |           |   USBTMC   |    VISA    |
 |:---------:|:----------:|:----------:|
 |   Linux   |    None    |[pyvisa](#Pyvisa)|
@@ -38,9 +34,10 @@ The table of prerequiste varies
 More details about the installation of pyvisa can be found [here][pyvisa_link] 
 
 #### Driver 
-Driver installation can be found here
+Driver installation subjects to the chosen hardware(s). For exmaple, the Rigol arbitrary waveform generator requires the type-specific IVI driver, as listed [here][rigoldriver]. Users of PyTES are suggested to install the driver according to the official documentaion of their own device(s).
 
 ### PyTES
+
 
 ## Features 
 -----
@@ -71,7 +68,7 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
 
 ```Python
 import SignalGenerator as SG()
-SG().amp(1)
+SG().amp(value=1, stim_mode='tACS')
 
 ```
 
@@ -90,11 +87,14 @@ SG().amp(1)
 * __Step 7__: Output stimulation signal via clicking "Output" of target channel
 
 ### Psychopy
+To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
 
 ### OpenVibe 
-__
+For OpenVibe users, you can use [The Python Scripting box][openvibe] to integrate the PyTES command to control the stimulation signal based on the online decoding results.
+
 
 ## Issues 
+-----
 1. __Font issues of the GUI version__
 The PyTES GUI is based on the package tkinter. It is known that the tkinter font cannot be correctly rendered under Anaconda Python on Ubuntu system. For better visualization, it is suggested to switch to non-conda Python installation. More discussion about this issue can be found [here][condaissue]
 
@@ -106,3 +106,6 @@ Devices which are already opened by VISA protocol cannot be opened by USBTMC dri
 -----
 [pyvisa_link]: https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
 [condaissue]: https://github.com/ContinuumIO/anaconda-issues/issues/6833#issuecomment-351363320
+[rigoldriver]: https://www.rigolna.com/download
+[psychopy]: https://www.psychopy.org/builder/components/code.html
+[openvibe]: http://openvibe.inria.fr/tutorial-using-python-with-openvibe/#The+Python+Scripting+box
