@@ -1,11 +1,3 @@
-# ========================================
-# Author     : Jiachen Xu
-# Blog       : www.jiachenxu.net
-# Time       : 2021-08-10 20:13:48
-# Name       : test_gui.py
-# Version    : V1.0
-# Description: A minimal example for tkinter based gui
-# ========================================
 
 import os
 import sys
