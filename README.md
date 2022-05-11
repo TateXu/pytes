@@ -38,8 +38,10 @@ More details about the installation of pyvisa can be found [here][pyvisa_link]
 Driver installation depends on the chosen hardware(s). For example, the Rigol arbitrary waveform generator requires the type-specific IVI driver, as listed [here][rigoldriver]. Users of PyTES are suggested to install the driver according to the official documentation of their own device(s).
 
 ### PyTES
-
-
+You can either clone this repo or install pytes via pip:
+```bash
+pip install git+https://github.com/TateXu/pytes.git
+```
 
 ## Features 
 -----
@@ -67,11 +69,14 @@ For the GUI version of PyTES, the timers for stimulation and fade in/out can be 
 
 ### Command Line 
 
-The usage via the command-line version is just as same as the other Python packages. One example of controlling the stimulation amplitude of the tACS signal is shown below:
-
+The usage via the command-line version is just as same as the other Python packages. One example of outputing a tACS signal with 1V ampltiude, 25Hz frequency and 45 degree phase shift is as shown below: 
 ```Python
-import SignalGenerator as SG()
-SG().amp(value=1, stim_mode='tACS')
+from pytes.signal_generator import SignalGenerator as SG
+control = SG()
+control.amp(value=1, chn=1, stim_mode='tACS')  # Adjust the tACS amplitude of channel 1 to 1V
+control.freq(value=25, chn=1, stim_mode='tACS')  # Adjust the tACS freuqency of channel 1 to 25Hz
+control.phase(value=45, chn=1, stim_mode='tACS')  # Adjust the tACS phase shift of channel 1 to 45 degree
+control.on(chn=1)  # Turn on the output of channel 1
 
 ```
 
@@ -81,24 +86,25 @@ In addition to the provided functions, it is also possible and convenient to dir
 
 
 ### GUI 
-* __Step 1__: Driver selection, USBTMC or VISA (Note: USBTMC is not applicable for Windows; For USBTMC protocol, the root access is required)
+* __Step 1__: Run the GUI file - `pytes/pytes_gui.py`
+* __Step 2__: Driver selection, USBTMC or VISA (Note: USBTMC is not applicable for Windows; For USBTMC protocol, the root access is required)
 ![pwdinput](./Figures/toolbox_2.png)
-* __Step 2__: Device selection from the option menu
-* __Step 3__: Connection test via clicking "Connect" button
-* __Step 4__: Parameter setup
+* __Step 3__: Device selection from the option menu
+* __Step 4__: Connection test via clicking "Connect" button
+* __Step 5__: Parameter setup
     * tDCS/tACS/tRNS - Fill in the value in the allowable entry
     * Arbitraty signal stimulation - Input the absolute path to the data file (in .pkl format, more details refer to [Features](#Features) )
-* __Step 5__: Stimulation signal check via clicking "Update Parameters" button
-* __Step 6__: Timer setup for stimulation duration and fade in/out duration.
+* __Step 6__: Stimulation signal check via clicking "Update Parameters" button
+* __Step 7__: Timer setup for stimulation duration and fade in/out duration.
     * `None` value for stimulation duration means a indefinite stimulation
     * `None` value for fade duration means no fade in/out will be applied
-* __Step 7__: Output stimulation signal via clicking "Output" of target channel
+* __Step 8__: Output stimulation signal via clicking "Output" of target channel
 
-Step 1 - 5:
+Step 1 - 6:
 
 https://user-images.githubusercontent.com/27919893/167694285-08fd13ac-9ce1-4704-9b3f-1793c79d7791.mp4
 
-Step 6 - 7:
+Step 7 - 8:
 
 https://user-images.githubusercontent.com/27919893/167694322-c0be0b92-31af-499b-8efa-535c65c14e07.mp4
 
