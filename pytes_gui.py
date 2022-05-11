@@ -14,7 +14,7 @@ import tkinter.font as tkFont
 from tkinter import (Label, Entry, Button, Checkbutton, OptionMenu,
                      StringVar, messagebox, simpledialog)
 
-from signal_generator import SignalGenerator as SG
+from pytes.signal_generator import SignalGenerator as SG
 
 matplotlib.use('TkAgg')
 
