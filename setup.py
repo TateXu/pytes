@@ -29,5 +29,5 @@ setup(
         "License :: 3-clause BSD",
     ],
     license="3-clause BSD",
-    data_files = [('Figures', ['./Figures/*.png', './Figures/*.jpeg'])]
+    data_files = [('Figures', ['Figures/*.png', 'Figures/*.jpeg'])]
 )
