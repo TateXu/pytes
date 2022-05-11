@@ -23,11 +23,10 @@ setup(
     url="https://github.com/TateXu/pytes",
     packages=['pytes'],
     package_dir={'pytes': 'pytes/'},
-    package_data={'pytes': ['example_data/*.pkl']},
+    package_data={'pytes': ['example_data/*.pkl','Figures/*.png',,'Figures/*.jpeg']},
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: 3-clause BSD",
     ],
     license="3-clause BSD",
-    data_files = [('Figures', ['Figures/label_amp.png'])]
 )
