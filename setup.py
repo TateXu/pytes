@@ -21,11 +21,13 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/TateXu/pytes",
-    packages=find_packages(),
+    packages=['pytes'],
+    package_dir={'pytes': 'pytes/pytes'},
+    package_data={'pytes': ['example_data/*.pkl']},
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: 3-clause BSD",
     ],
     license="3-clause BSD",
-    data_files = gen_data_files("pytes/Figures", "pytes/Examples")
+    data_files = [('Figures', ['pytes/Figures/*.png', 'pytes/Figures/*.jpeg'])]
 )
