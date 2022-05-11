@@ -26,5 +26,5 @@ setup(
         "License :: 3-clause BSD",
     ],
     license="3-clause BSD",
-    data_files = gen_data_files("./Figures", "./Examples")
+    data_files = gen_data_files("pytes/Figures", "pytes/Examples")
 )
