@@ -13,7 +13,6 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/TateXu/pytes",
     packages=find_packages(),
-    install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: 3-clause BSD",
