@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["python>=3"]
+requirements = ["python>=3.6"]
 
 setup(
     name="PyTES",
