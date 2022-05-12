@@ -110,7 +110,7 @@ https://user-images.githubusercontent.com/27919893/168047284-8d88436a-8dfe-4a55-
 
 Step 7 - 8:
 
-https://user-images.githubusercontent.com/27919893/168047341-9c9c3ddf-988d-406d-a39d-360e4965bb0c.mp4
+https://user-images.githubusercontent.com/27919893/168048558-cab8934d-0805-4608-9cab-7e1564547127.mp4
 
 ### Psychopy
 To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
@@ -152,10 +152,5 @@ Devices that are already opened by the VISA protocol cannot be opened by USBTMC 
 
 
 
-https://user-images.githubusercontent.com/27919893/168048556-1a8cb2a2-d70d-4c57-baa3-489789f92633.mp4
-
-
-
-https://user-images.githubusercontent.com/27919893/168048558-cab8934d-0805-4608-9cab-7e1564547127.mp4
 
 
