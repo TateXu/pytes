@@ -151,17 +151,3 @@ Devices that are already opened by the VISA protocol cannot be opened by USBTMC 
 [pytesfunction]: https://github.com/TateXu/pytes/blob/cb66334b7d7131cd4810b9c9db1c80861fc94695/signal_generator.py#L475
 
 
-
-
-
-
-
-
-
-
-https://user-images.githubusercontent.com/27919893/168047882-32ab4089-433c-4752-8fcf-29275f9be85e.mp4
-
-
-
-https://user-images.githubusercontent.com/27919893/168047886-67cde523-fe1c-4730-b416-f2d9ccfcb5e0.mp4
-
