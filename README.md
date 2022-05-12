@@ -15,10 +15,10 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
     * TES with arbitrary signal
     * Timer for stimulation and fade in/out duration (GUI version)
 * [Usage](#Usage)
-    * Command line 
-    * GUI 
-    * In Psychopy
-    * In OpenVibe 
+    * [Command line](#Command)
+    * [GUI](#GUI) 
+    * [In Psychopy](#Psychopy)
+    * [In OpenVibe](#OpenVibe)
     * [Live Demo](#Demo)
 * [Known Issues](#Issues)
 
