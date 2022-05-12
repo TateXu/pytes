@@ -1,3 +1,7 @@
+
+
+
+
   PyTES Documentation
 ========================================
 
@@ -106,11 +110,12 @@ from pytes.pytes_gui import PyTESWindow
 
 Step 1 - 6:
 
-https://user-images.githubusercontent.com/27919893/168047284-8d88436a-8dfe-4a55-9366-7ab497079377.mp4
+https://user-images.githubusercontent.com/27919893/168106707-b0eb3b21-9bb6-46d4-807e-65dde389227e.mp4
 
 Step 7 - 8:
 
-https://user-images.githubusercontent.com/27919893/168048558-cab8934d-0805-4608-9cab-7e1564547127.mp4
+https://user-images.githubusercontent.com/27919893/168106713-14671f9e-4e41-4b81-b94e-d066f01f17a3.mp4
+
 
 ### Psychopy
 To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
