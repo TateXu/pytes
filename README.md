@@ -157,3 +157,11 @@ Devices that are already opened by the VISA protocol cannot be opened by USBTMC 
 
 
 
+
+
+https://user-images.githubusercontent.com/27919893/168047882-32ab4089-433c-4752-8fcf-29275f9be85e.mp4
+
+
+
+https://user-images.githubusercontent.com/27919893/168047886-67cde523-fe1c-4730-b416-f2d9ccfcb5e0.mp4
+
