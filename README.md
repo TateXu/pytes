@@ -131,24 +131,10 @@ https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-
 1. __Font issues of the GUI version__:
 The PyTES GUI is based on the package Tkinter. It is known that the Tkinter font cannot be correctly rendered under Anaconda Python on the Ubuntu system. For better visualization, it is suggested to switch to a non-conda Python installation. More discussion about this issue can be found [here][condaissue]
 
-      
-
-
 
 2. __USBTMC driver cannot be selected after using the VISA driver__:
 Devices that are already opened by the VISA protocol cannot be opened by USBTMC drivers. Restarting the hardware devices can fix the issue.
     
-
-
-
-
-https://user-images.githubusercontent.com/27919893/168048927-8e6f3f55-a9c0-4214-8d61-6d13d887e594.mov
-
-
-
-https://user-images.githubusercontent.com/27919893/168048934-ea2ece86-445f-441b-bd1c-2e4b7dbe3ba7.mov
-
-
 
 -----
 [pyvisa_link]: https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
