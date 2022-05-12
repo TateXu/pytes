@@ -206,7 +206,7 @@ class PyTESWindow():
                 title='Warning', message='Please select only one protocol!')
             return None
         elif not visa_status and usbtmc_status:
-            from signal_generator import USBTMC
+            from pytes.signal_generator import USBTMC
 
             tmp = USBTMC(inst=False)
             for i, i_dev in enumerate(tmp.available_port_list()):
@@ -222,7 +222,7 @@ class PyTESWindow():
                 USBTMC(inst=False).dev_list()
             self.protocol = 'USBTMC'
         elif visa_status and not usbtmc_status:
-            from signal_generator import VISA
+            from pytes.signal_generator import VISA
             try:
                 self.all_devices, self.dev_inst_list = VISA(inst=False).dev_list()
             except ModuleNotFoundError:
