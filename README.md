@@ -106,11 +106,11 @@ from pytes.pytes_gui import PyTESWindow
 
 Step 1 - 6:
 
-https://user-images.githubusercontent.com/27919893/167694285-08fd13ac-9ce1-4704-9b3f-1793c79d7791.mp4
+https://user-images.githubusercontent.com/27919893/168047284-8d88436a-8dfe-4a55-9366-7ab497079377.mp4
 
 Step 7 - 8:
 
-https://user-images.githubusercontent.com/27919893/167694322-c0be0b92-31af-499b-8efa-535c65c14e07.mp4
+https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-9f39-fe7202f3662b.mp4
 
 ### Psychopy
 To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
@@ -121,7 +121,7 @@ For OpenVibe users, you can use [The Python Scripting box][openvibe] to integrat
 ### Demo
 A live demo for controlling the stimulation signal on Windows is as shown below:
 
-https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-9f39-fe7202f3662b.mp4
+
 
 
 
@@ -131,9 +131,17 @@ https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-
 The PyTES GUI is based on the package Tkinter. It is known that the Tkinter font cannot be correctly rendered under Anaconda Python on the Ubuntu system. For better visualization, it is suggested to switch to a non-conda Python installation. More discussion about this issue can be found [here][condaissue]
 
       
+
+https://user-images.githubusercontent.com/27919893/168047341-9c9c3ddf-988d-406d-a39d-360e4965bb0c.mp4
+
+
 2. __USBTMC driver cannot be selected after using the VISA driver__:
 Devices that are already opened by the VISA protocol cannot be opened by USBTMC drivers. Restarting the hardware devices can fix the issue.
     
+
+
+
+
 -----
 [pyvisa_link]: https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
 [condaissue]: https://github.com/ContinuumIO/anaconda-issues/issues/6833#issuecomment-351363320
