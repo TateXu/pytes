@@ -19,6 +19,7 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
     * GUI 
     * In Psychopy
     * In OpenVibe 
+    * [Live Demo](#Demo)
 * [Known Issues](#Issues)
 
 ## Installation
@@ -116,6 +117,12 @@ To integrate the real-time stimulation signal control code into the experimental
 
 ### OpenVibe 
 For OpenVibe users, you can use [The Python Scripting box][openvibe] to integrate the PyTES command to control the stimulation signal based on the online decoding results.
+
+### Demo
+A live demo for controlling the stimulation signal on Windows is as shown below:
+
+https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-9f39-fe7202f3662b.mp4
+
 
 
 ## Issues 
