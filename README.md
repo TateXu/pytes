@@ -2,7 +2,7 @@
 ========================================
 
 PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote control of transcranial electric stimulation and ease deploying a closed-loop TES system. PyTES supports two communication protocols to control the hardware: VISA and USBTMC.
-![PyTES GUI](./Figures/toolbox_1.png)
+![PyTES GUI](./pytes/Figures/toolbox_1.png)
  
 ****
 
@@ -88,7 +88,7 @@ In addition to the provided functions, it is also possible and convenient to dir
 ### GUI 
 * __Step 1__: Run the GUI file - `pytes/pytes_gui.py`
 * __Step 2__: Driver selection, USBTMC or VISA (Note: USBTMC is not applicable for Windows; For USBTMC protocol, the root access is required)
-![pwdinput](./Figures/toolbox_2.png)
+![pwdinput](./pytes/Figures/toolbox_2.png)
 * __Step 3__: Device selection from the option menu
 * __Step 4__: Connection test via clicking "Connect" button
 * __Step 5__: Parameter setup
