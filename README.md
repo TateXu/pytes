@@ -142,6 +142,14 @@ Devices that are already opened by the VISA protocol cannot be opened by USBTMC 
 
 
 
+https://user-images.githubusercontent.com/27919893/168048927-8e6f3f55-a9c0-4214-8d61-6d13d887e594.mov
+
+
+
+https://user-images.githubusercontent.com/27919893/168048934-ea2ece86-445f-441b-bd1c-2e4b7dbe3ba7.mov
+
+
+
 -----
 [pyvisa_link]: https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
 [condaissue]: https://github.com/ContinuumIO/anaconda-issues/issues/6833#issuecomment-351363320
