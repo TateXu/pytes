@@ -22,7 +22,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/TateXu/pytes",
     packages=['pytes'],
-    package_dir={'pytes': 'pytes/'},
+    package_dir={'pytes': 'pytes'},
     package_data={'pytes': ['example_data/*.pkl','Figures/*.png','Figures/*.jpeg']},
     classifiers=[
         "Programming Language :: Python :: 3.7",
