@@ -110,7 +110,7 @@ https://user-images.githubusercontent.com/27919893/168047284-8d88436a-8dfe-4a55-
 
 Step 7 - 8:
 
-https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-9f39-fe7202f3662b.mp4
+https://user-images.githubusercontent.com/27919893/168047341-9c9c3ddf-988d-406d-a39d-360e4965bb0c.mp4
 
 ### Psychopy
 To integrate the real-time stimulation signal control code into the experimental paradigm written by PsychoPy, you can leverage the [Code Component][psychopy] function of PsychoPy, in which the snippets of PyTES control commands can be inserted into the experimental paradigm code.
@@ -122,6 +122,7 @@ For OpenVibe users, you can use [The Python Scripting box][openvibe] to integrat
 A live demo for controlling the stimulation signal on Windows is as shown below:
 
 
+https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-9f39-fe7202f3662b.mp4
 
 
 
@@ -132,7 +133,6 @@ The PyTES GUI is based on the package Tkinter. It is known that the Tkinter font
 
       
 
-https://user-images.githubusercontent.com/27919893/168047341-9c9c3ddf-988d-406d-a39d-360e4965bb0c.mp4
 
 
 2. __USBTMC driver cannot be selected after using the VISA driver__:
