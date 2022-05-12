@@ -543,8 +543,9 @@ class PyTESWindow():
         screen_height = self. window.winfo_screenheight()
 
         ratio = (screen_width*9) / (screen_height*16)
-        self.window_width = screen_width * .5 / ratio
-        self.window_height = screen_height * .5
+        res_ratio = np.power(2, (-screen_height/2160))
+        self.window_width = screen_width * res_ratio / ratio
+        self.window_height = screen_height * res_ratio
         self.window_start_x = screen_width * .2
         self.window_start_y = screen_height * .2
         window.geometry("%dx%d+%d+%d" % (self.window_width, self.window_height,
@@ -554,6 +555,7 @@ class PyTESWindow():
 
         self.fontsize = np.amin([self.window_width/80,
                                  self.window_height/80]).astype(int)
+        self.fontsize = np.amax([13, self.fontsize])
 
     def _from_rgb(self, rgb):
         return "#%02x%02x%02x" % rgb
