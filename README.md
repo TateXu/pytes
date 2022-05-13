@@ -14,7 +14,7 @@ PyTES is a Python-based, 3-clause BSD licensed toolbox to facilitate the remote 
 
 * [Installation](#Installation)
 * [Features](#Features)
-    * Plug-in-play
+    * Plug-and-play
     * Closed-loop application
     * TES with arbitrary signal
     * Timer for stimulation and fade in/out duration (GUI version)
@@ -50,7 +50,7 @@ pip install git+https://github.com/TateXu/pytes.git
 
 ## Features 
 -----
-### Plug-in-play
+### Plug-and-play
 This feature leverages the default USBTMC driver of the Linux system such that the USBTMC interface can be opened as a file node. Please note that this feature is only available for Linux users using the USBTMC protocol.
 
 ### Closed-loop application
