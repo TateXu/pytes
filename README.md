@@ -147,7 +147,9 @@ The PyTES GUI is based on the package Tkinter. It is known that the Tkinter font
 
 2. __USBTMC driver cannot be selected after using the VISA driver__:
 Devices that are already opened by the VISA protocol cannot be opened by USBTMC drivers. Restarting the hardware devices can fix the issue.
-    
+
+3. __Long initialization on Windows__:
+Please be aware that a longer initialization duration is expected on Windows system due to the file scanning via pyvisa.
 
 -----
 [pyvisa_link]: https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
