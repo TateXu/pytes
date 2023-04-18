@@ -123,11 +123,19 @@ To integrate the real-time stimulation signal control code into the experimental
 ### OpenVibe 
 For OpenVibe users, you can use [The Python Scripting box][openvibe] to integrate the PyTES command to control the stimulation signal based on the online decoding results.
 
-### Demo
-A live demo for controlling the stimulation signal on Windows is as shown below:
+### Demos
 
+1. Demo for controlling the stimulation signal on Windows:
 
 https://user-images.githubusercontent.com/27919893/168045550-190f09b7-c675-46e8-9f39-fe7202f3662b.mp4
+
+2. Demo for controlling the stimulation signal via USBTMC driver on Linux:
+
+https://user-images.githubusercontent.com/27919893/232707798-16da6901-270e-40c7-8154-4dad5ade8193.MOV
+
+3. Demo for controlling the stimulation signal via VISA driver on Linux:
+
+https://user-images.githubusercontent.com/27919893/232707757-739c93f7-98bf-44f2-98cb-89c469b82bde.MOV
 
 
 
